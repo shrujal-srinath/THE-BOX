@@ -1,0 +1,43 @@
+/* src/styles/hardware.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Hardware Button Base */
+.hw-button {
+  transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.hw-button:active {
+  transform: scale(0.96);
+  filter: brightness(0.8);
+}
+
+/* Glass/Metal Texture Effect */
+.glass-panel {
+  background: rgba(24, 24, 27, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* LED Status Light Animation */
+@keyframes blink {
+  0%, 100% { opacity: 1; box-shadow: 0 0 10px currentColor; }
+  50% { opacity: 0.4; box-shadow: 0 0 2px currentColor; }
+}
+
+.animate-led {
+  animation: blink 2s infinite;
+}
+
+/* No Scroll Utility */
+.no-scroll {
+  overscroll-behavior: none;
+  overflow: hidden;
+}
