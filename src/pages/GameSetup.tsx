@@ -21,7 +21,8 @@ export const GameSetup: React.FC = () => {
         sport, 
         'LOCAL_HOST'
       );
-      navigate(`/host/${code}`);
+      // FIXED: Navigate to Tablet Controller
+      navigate(`/tablet/${code}`);
     } catch (e) {
       console.error(e);
       alert("Error creating game");
