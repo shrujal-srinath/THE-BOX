@@ -10,13 +10,10 @@ function App() {
     <Router>
       <div className="min-h-screen bg-black text-white">
         <Routes>
-          {/* Main Routes */}
           <Route path="/" element={<Navigate to="/setup" replace />} />
           <Route path="/setup" element={<GameSetup />} />
           <Route path="/tablet/:gameCode" element={<TabletController />} />
           <Route path="/dashboard" element={<Dashboard />} />
-          
-          {/* Fallback */}
           <Route path="*" element={<Navigate to="/setup" replace />} />
         </Routes>
       </div>
