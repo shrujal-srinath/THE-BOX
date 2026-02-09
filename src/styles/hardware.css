@@ -41,3 +41,38 @@
   overscroll-behavior: none;
   overflow: hidden;
 }
+/* ============================================
+   MULTI-SPORT THEME SYSTEM
+   ============================================ */
+
+/* Default (Basketball) */
+:root {
+  --sport-primary: #F97316;
+  --sport-glow: rgba(249, 115, 22, 0.4);
+}
+
+/* Badminton Theme */
+body[data-sport="badminton"] {
+  --sport-primary: #10B981;
+  --sport-glow: rgba(16, 185, 129, 0.4);
+}
+
+/* Kabaddi Theme */
+body[data-sport="kabaddi"] {
+  --sport-primary: #DC2626;
+  --sport-glow: rgba(220, 38, 38, 0.4);
+}
+
+/* Sport-themed elements */
+.sport-accent {
+  color: var(--sport-primary);
+  box-shadow: 0 0 20px var(--sport-glow);
+}
+
+.sport-button {
+  border-left: 4px solid var(--sport-primary);
+  background: linear-gradient(135deg, 
+    rgba(0,0,0,0.8), 
+    var(--sport-glow)
+  );
+}
